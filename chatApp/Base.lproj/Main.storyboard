@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IBj-f7-ul7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -22,7 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="H3S-WG-KQS" kind="show" id="Oaw-d0-Jzy"/>
+                                    <segue destination="S3I-6f-N3e" kind="show" id="RN4-0V-FT7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -38,43 +39,144 @@
             </objects>
             <point key="canvasLocation" x="1222.5" y="356"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="4KZ-t1-WGp">
+        <!--View Controller-->
+        <scene sceneID="ITj-sd-len">
             <objects>
-                <tableViewController id="H3S-WG-KQS" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6iO-po-Kvo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <viewController id="S3I-6f-N3e" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="67r-Lg-1s1"/>
+                        <viewControllerLayoutGuide type="bottom" id="sFU-p3-HP0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kSW-nt-jG6">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wix-Py-0p4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ZG-ix-jvn">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bli-aj-IJZ">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="iu9-IF-6b6"/>
+                                        </constraints>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="iu9-IF-6b6"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="iu9-IF-6b6"/>
+                                            </mask>
+                                        </variation>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="3ZG-ix-jvn" firstAttribute="leading" secondItem="wix-Py-0p4" secondAttribute="leadingMargin" id="28r-Sv-9va"/>
+                                    <constraint firstItem="3ZG-ix-jvn" firstAttribute="top" secondItem="wix-Py-0p4" secondAttribute="topMargin" id="4dd-mg-w7f"/>
+                                    <constraint firstItem="Bli-aj-IJZ" firstAttribute="top" secondItem="wix-Py-0p4" secondAttribute="top" constant="17" id="Fg2-dJ-4uL"/>
+                                    <constraint firstItem="Bli-aj-IJZ" firstAttribute="trailing" secondItem="wix-Py-0p4" secondAttribute="trailingMargin" id="RcB-DL-a0L"/>
+                                    <constraint firstItem="3ZG-ix-jvn" firstAttribute="bottom" secondItem="wix-Py-0p4" secondAttribute="bottomMargin" id="YKg-yc-iQj"/>
+                                    <constraint firstItem="Bli-aj-IJZ" firstAttribute="leading" secondItem="3ZG-ix-jvn" secondAttribute="trailing" constant="2" id="j7S-I9-qOu"/>
+                                    <constraint firstItem="3ZG-ix-jvn" firstAttribute="centerY" secondItem="Bli-aj-IJZ" secondAttribute="centerY" id="mhQ-Np-OBq"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="3ZG-ix-jvn"/>
+                                        <exclude reference="Bli-aj-IJZ"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="28r-Sv-9va"/>
+                                        <exclude reference="4dd-mg-w7f"/>
+                                        <exclude reference="YKg-yc-iQj"/>
+                                        <exclude reference="mhQ-Np-OBq"/>
+                                        <exclude reference="Fg2-dJ-4uL"/>
+                                        <exclude reference="RcB-DL-a0L"/>
+                                        <exclude reference="j7S-I9-qOu"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="3ZG-ix-jvn"/>
+                                        <include reference="Bli-aj-IJZ"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="28r-Sv-9va"/>
+                                        <include reference="4dd-mg-w7f"/>
+                                        <include reference="YKg-yc-iQj"/>
+                                        <include reference="mhQ-Np-OBq"/>
+                                        <include reference="Fg2-dJ-4uL"/>
+                                        <include reference="RcB-DL-a0L"/>
+                                        <include reference="j7S-I9-qOu"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="69q-rb-q6H">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="536"/>
+                                </variation>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="5bU-lU-gdS">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="61"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ZT-xT-bmb">
-                                    <rect key="frame" x="8" y="8" width="480" height="45"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                </textView>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4En-sx-bzq">
-                                    <rect key="frame" x="512" y="16" width="46" height="30"/>
-                                    <state key="normal" title="Button">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
-                        <connections>
-                            <outlet property="dataSource" destination="H3S-WG-KQS" id="zpR-ue-2un"/>
-                            <outlet property="delegate" destination="H3S-WG-KQS" id="cIA-oT-O4k"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tYc-wM-2ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="wix-Py-0p4" secondAttribute="centerX" id="7Dv-Lq-IR9"/>
+                            <constraint firstAttribute="trailing" secondItem="wix-Py-0p4" secondAttribute="trailing" id="Ndw-W8-k3A"/>
+                            <constraint firstItem="69q-rb-q6H" firstAttribute="trailing" secondItem="wix-Py-0p4" secondAttribute="trailing" id="RES-0v-LpJ"/>
+                            <constraint firstItem="wix-Py-0p4" firstAttribute="bottom" secondItem="sFU-p3-HP0" secondAttribute="top" id="RfG-ia-Gvk"/>
+                            <constraint firstItem="69q-rb-q6H" firstAttribute="leading" secondItem="wix-Py-0p4" secondAttribute="leading" id="dQj-Ku-VQi"/>
+                            <constraint firstItem="wix-Py-0p4" firstAttribute="top" secondItem="69q-rb-q6H" secondAttribute="bottom" constant="20" id="nbY-4G-Ada"/>
+                            <constraint firstItem="69q-rb-q6H" firstAttribute="top" secondItem="kSW-nt-jG6" secondAttribute="top" id="p2d-H2-DUz"/>
+                            <constraint firstItem="69q-rb-q6H" firstAttribute="leading" secondItem="kSW-nt-jG6" secondAttribute="leading" id="tZM-vh-vcQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="wix-Py-0p4"/>
+                                <exclude reference="69q-rb-q6H"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="RES-0v-LpJ"/>
+                                <exclude reference="dQj-Ku-VQi"/>
+                                <exclude reference="p2d-H2-DUz"/>
+                                <exclude reference="tZM-vh-vcQ"/>
+                                <exclude reference="7Dv-Lq-IR9"/>
+                                <exclude reference="Ndw-W8-k3A"/>
+                                <exclude reference="RfG-ia-Gvk"/>
+                                <exclude reference="nbY-4G-Ada"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="wix-Py-0p4"/>
+                                <include reference="69q-rb-q6H"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="RES-0v-LpJ"/>
+                                <include reference="dQj-Ku-VQi"/>
+                                <include reference="p2d-H2-DUz"/>
+                                <include reference="tZM-vh-vcQ"/>
+                                <include reference="7Dv-Lq-IR9"/>
+                                <include reference="Ndw-W8-k3A"/>
+                                <include reference="RfG-ia-Gvk"/>
+                                <include reference="nbY-4G-Ada"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ds1-Pr-fVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1884" y="345"/>
+            <point key="canvasLocation" x="1864.5" y="356"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iMv-Pw-3tF">
